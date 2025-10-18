@@ -18,3 +18,12 @@ A responsive and interactive cryptocurrency dashboard that displays real-time ma
 - **Chart.js**: Interactive data visualization
 - **Moment.js**: Date and time manipulation
 - **REST API**: External cryptocurrency data
+
+🎯 Usage
+The dashboard automatically loads top cryptocurrencies
+
+Click on any trading pair to view its price chart
+
+Use date pickers to select custom date ranges
+
+Adjust time frame for different chart granularity
