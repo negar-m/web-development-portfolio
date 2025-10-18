@@ -19,7 +19,7 @@ A responsive and interactive cryptocurrency dashboard that displays real-time ma
 - **Moment.js**: Date and time manipulation
 - **REST API**: External cryptocurrency data
 
-🎯 Usage
+## 🎯 Usage
 The dashboard automatically loads top cryptocurrencies
 
 Click on any trading pair to view its price chart
