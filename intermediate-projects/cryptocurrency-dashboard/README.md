@@ -20,10 +20,10 @@ A responsive and interactive cryptocurrency dashboard that displays real-time ma
 - **REST API**: External cryptocurrency data
 
 ## 🎯 Usage
-The dashboard automatically loads top cryptocurrencies
+- The dashboard automatically loads top cryptocurrencies
 
-Click on any trading pair to view its price chart
+- Click on any trading pair to view its price chart
 
-Use date pickers to select custom date ranges
+- Use date pickers to select custom date ranges
 
-Adjust time frame for different chart granularity
+- Adjust time frame for different chart granularity
