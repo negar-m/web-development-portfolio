@@ -21,13 +21,13 @@
         }
         
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
         }
         
         .header {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 40px;
             padding: 50px 20px;
             background: rgba(52, 101, 109, 0.3);
             border-radius: 20px;
@@ -48,6 +48,52 @@
             opacity: 0.9;
             max-width: 600px;
             margin: 0 auto;
+        }
+        
+        /* Tabs Styling */
+        .tabs {
+            display: flex;
+            margin-bottom: 30px;
+            background: rgba(51, 68, 67, 0.8);
+            border-radius: 15px;
+            padding: 10px;
+            gap: 10px;
+        }
+        
+        .tab-btn {
+            flex: 1;
+            padding: 15px 20px;
+            background: transparent;
+            border: none;
+            color: #FAEAB1;
+            font-size: 1.1em;
+            font-weight: 600;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .tab-btn.active {
+            background: linear-gradient(135deg, #BF092F, #34656D);
+            box-shadow: 0 4px 15px rgba(191, 9, 47, 0.3);
+        }
+        
+        .tab-btn:hover:not(.active) {
+            background: rgba(250, 234, 177, 0.1);
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         
         .projects-grid {
@@ -179,6 +225,10 @@
             .header {
                 padding: 40px 20px;
             }
+            
+            .tabs {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -189,66 +239,117 @@
             <p>Frontend Developer & Creative Coder</p>
         </div>
         
-        <div class="projects-grid">
-            <!-- Todo List Project -->
-            <div class="project-card">
-    <h2>💰 Cryptocurrency Dashboard</h2>
-    <p>A real-time cryptocurrency tracking dashboard with live price updates, portfolio management, and interactive charts. Monitor your crypto investments with beautiful visualizations.</p>
+        <!-- Tabs Navigation -->
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="intermediate">🚀 Intermediate Projects</button>
+            <button class="tab-btn" data-tab="beginner">📚 Beginner Projects</button>
+        </div>
+        
+        <!-- Intermediate Projects Tab -->
+        <div class="tab-content active" id="intermediate">
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h2>📝 Todo List App</h2>
+                    <p>A modern, responsive todo list application with local storage persistence. Features task management, completion tracking, and clean Bootstrap design.</p>
+                    
+                    <div class="tech-stack">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Bootstrap</span>
+                        <span class="tech-tag">Local Storage</span>
+                    </div>
+                    
+                    <a href="intermediate-projects/todo-list-localstorage/index.html" target="_blank" rel="noopener noreferrer" class="demo-btn">
+                        🚀 Live Demo
+                    </a>
+                </div>
+                
+                <div class="project-card">
+                    <h2>💰 Cryptocurrency Dashboard</h2>
+                    <p>A real-time cryptocurrency tracking dashboard with live price updates, portfolio management, and interactive charts. Monitor your crypto investments with beautiful visualizations.</p>
+                    
+                    <div class="tech-stack">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">API Integration</span>
+                        <span class="tech-tag">Chart.js</span>
+                        <span class="tech-tag">Local Storage</span>
+                        <span class="tech-tag">Responsive Design</span>
+                    </div>
+                    
+                    <a href="intermediate-projects/cryptocurrency-dashboard/index.html" target="_blank" rel="noopener noreferrer" class="demo-btn">
+                        🚀 Live Demo
+                    </a>
+                </div>
+                
+              
+        
+        <!-- Beginner Projects Tab -->
+        <div class="tab-content" id="beginner">
+            <div class="projects-grid">
+                  <div class="project-card">
+                    <h2>⛅ Weather App</h2>
+                    <p>Real-time weather application with beautiful UI and accurate weather data display. Perfect for checking forecasts on the go.</p>
+                    
+                    <div class="tech-stack">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">API Integration</span>
+                        <span class="tech-tag">Responsive Design</span>
+                    </div>
+                    
+                    <a href="beginner-projects/javascript-weather-app/weather.html" target="_blank" rel="noopener noreferrer" class="demo-btn">
+                        🚀 Live Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+               <div class="project-card">
+    <h2>🌡️ Temperature Converter</h2>
+    <p>A sleek and intuitive temperature conversion tool that instantly converts between Celsius, Fahrenheit, and Kelvin. Features real-time updates and a beautiful, user-friendly interface.</p>
     
     <div class="tech-stack">
         <span class="tech-tag">HTML5</span>
         <span class="tech-tag">CSS3</span>
         <span class="tech-tag">JavaScript</span>
-        <span class="tech-tag">API Integration</span>
-        <span class="tech-tag">Chart.js</span>
-        <span class="tech-tag">Local Storage</span>
+        <span class="tech-tag">Real-time Conversion</span>
+        <span class="tech-tag">UI/UX Design</span>
         <span class="tech-tag">Responsive Design</span>
     </div>
     
-    <a href="intermediate-projects/cryptocurrency-dashboard/index.html" target="_blank" rel="noopener noreferrer" class="demo-btn">
+    <a href="beginner-projects/temperature-converter/temperature-converter.html" target="_blank" rel="noopener noreferrer" class="demo-btn">
         🚀 Live Demo
     </a>
 </div>
-            <!-- Todo List Project -->
-            <div class="project-card">
-                <h2>📝 Todo List App</h2>
-                <p>A modern, responsive todo list application with local storage persistence. Features task management, completion tracking, and clean Bootstrap design.</p>
-                
-                <div class="tech-stack">
-                    <span class="tech-tag">HTML5</span>
-                    <span class="tech-tag">CSS3</span>
-                    <span class="tech-tag">JavaScript</span>
-                    <span class="tech-tag">Bootstrap</span>
-                    <span class="tech-tag">Local Storage</span>
-                </div>
-                
-                <a href="intermediate-projects/todo-list-localstorage/index.html" target="_blank" rel="noopener noreferrer" class="demo-btn">
-                    🚀 Live Demo
-                </a>
-            </div>
-            
-            <!-- Weather App Project -->
-            <div class="project-card">
-                <h2>⛅ Weather App</h2>
-                <p>Real-time weather application with beautiful UI and accurate weather data display. Perfect for checking forecasts on the go.</p>
-                
-                <div class="tech-stack">
-                    <span class="tech-tag">HTML5</span>
-                    <span class="tech-tag">CSS3</span>
-                    <span class="tech-tag">JavaScript</span>
-                    <span class="tech-tag">API Integration</span>
-                    <span class="tech-tag">Responsive Design</span>
-                </div>
-                
-                <a href="beginner-projects/javascript-weather-app/weather.html" target="_blank" rel="noopener noreferrer" class="demo-btn">
-                    🚀 Live Demo
-                </a>
-            </div>
         </div>
         
         <div class="footer">
             <p>Explore more projects on my <a href="https://github.com/negar-m" target="_blank" class="github-link">GitHub Profile</a></p>
         </div>
     </div>
+
+    <script>
+        // Tab functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons and contents
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+                    
+                    // Add active class to clicked button and corresponding content
+                    btn.classList.add('active');
+                    const tabId = btn.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+        });
+    </script>
 </body>
 </html>
