@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Negar M - Web Developer Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #34656D 0%, #334443 100%);
+            color: #FAEAB1;
+            min-height: 100vh;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 50px 20px;
+            background: rgba(52, 101, 109, 0.3);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(250, 234, 177, 0.1);
+        }
+        
+        .header h1 {
+            font-size: 3.5em;
+            margin-bottom: 15px;
+            color: #FAEAB1;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .header p {
+            font-size: 1.3em;
+            color: #FAEAB1;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .projects-grid {
+            display: grid;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .project-card {
+            background: rgba(51, 68, 67, 0.8);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(250, 234, 177, 0.2);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #FAEAB1, #BF092F, #34656D);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            background: rgba(51, 68, 67, 0.9);
+        }
+        
+        .project-card h2 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            color: #FAEAB1;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .project-card p {
+            color: #FAEAB1;
+            opacity: 0.9;
+            margin-bottom: 25px;
+            font-size: 1.1em;
+            line-height: 1.7;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+        
+        .tech-tag {
+            background: linear-gradient(135deg, #BF092F, #34656D);
+            color: #FAEAB1;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+            border: 1px solid rgba(250, 234, 177, 0.3);
+        }
+        
+        .demo-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #BF092F, #34656D);
+            color: #FAEAB1;
+            padding: 14px 32px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(250, 234, 177, 0.3);
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(191, 9, 47, 0.3);
+        }
+        
+        .demo-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(191, 9, 47, 0.5);
+            background: linear-gradient(135deg, #34656D, #BF092F);
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background: rgba(52, 101, 109, 0.3);
+            border-radius: 20px;
+            margin-top: 50px;
+            border: 1px solid rgba(250, 234, 177, 0.1);
+        }
+        
+        .github-link {
+            color: #FAEAB1;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            border-bottom: 2px solid #BF092F;
+            padding-bottom: 2px;
+        }
+        
+        .github-link:hover {
+            color: #BF092F;
+            border-bottom-color: #FAEAB1;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5em;
+            }
+            
+            .project-card {
+                padding: 30px 25px;
+            }
+            
+            .project-card h2 {
+                font-size: 1.7em;
+            }
+            
+            .header {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Negar M</h1>
+            <p>Frontend Developer & Creative Coder</p>
+        </div>
+        
+        <div class="projects-grid">
+            <!-- Todo List Project -->
+            <div class="project-card">
+                <h2>📝 Todo List App</h2>
+                <p>A modern, responsive todo list application with local storage persistence. Features task management, completion tracking, and clean Bootstrap design.</p>
+                
+                <div class="tech-stack">
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">CSS3</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">Bootstrap</span>
+                    <span class="tech-tag">Local Storage</span>
+                </div>
+                
+                <a href="intermediate-projects/todo-list-localstorage/index.html" target="_blank" rel="noopener noreferrer" class="demo-btn">
+                    🚀 Live Demo
+                </a>
+            </div>
+            
+            <!-- Weather App Project -->
+            <div class="project-card">
+                <h2>⛅ Weather App</h2>
+                <p>Real-time weather application with beautiful UI and accurate weather data display. Perfect for checking forecasts on the go.</p>
+                
+                <div class="tech-stack">
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">CSS3</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">API Integration</span>
+                    <span class="tech-tag">Responsive Design</span>
+                </div>
+                
+                <a href="beginner-projects/javascript-weather-app/weather.html" target="_blank" rel="noopener noreferrer" class="demo-btn">
+                    🚀 Live Demo
+                </a>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Explore more projects on my <a href="https://github.com/negar-m" target="_blank" class="github-link">GitHub Profile</a></p>
+        </div>
+    </div>
+</body>
+</html>
