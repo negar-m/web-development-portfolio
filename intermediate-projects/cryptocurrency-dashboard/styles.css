@@ -1,0 +1,167 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    color: white;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+  
+  .header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .header p {
+    font-size: 1rem;
+    opacity: 0.9;
+  }
+  
+  /* Container */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  /* Top Coins Section */
+  .details-section h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #444;
+  }
+  
+  .details-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .details-container .details-div {
+    background: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 130px;
+    text-align: center;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .details-container .details-div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  }
+  
+  .details-container img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    margin-top: 8px;
+  }
+  
+  /* Table Section */
+  .table-section h2 {
+    text-align: center;
+    margin: 2rem 0 1rem;
+    color: #444;
+  }
+  
+  .myTable {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  }
+  
+  .myTable th,
+  .myTable td {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95rem;
+  }
+  
+  .myTable th {
+    background: #f7f9fc;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #555;
+  }
+  
+  .myTable tr:hover {
+    background: #f1faff;
+    cursor: pointer;
+  }
+  
+  .myTable img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+  }
+  
+  /* Chart Section */
+  .chart-section {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  }
+  
+  .chart-section h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #444;
+  }
+  
+  .date-picker,
+  .timeframe {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .date-picker input,
+  .timeframe select {
+    padding: 0.4rem 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.9rem;
+  }
+  
+  #myChart {
+    max-width: 100%;
+    height: 420px;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 1.2rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    background: #fafafa;
+    border-top: 1px solid #ddd;
+    color: #666;
+  }
+  

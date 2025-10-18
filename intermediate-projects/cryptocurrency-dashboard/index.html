@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Crypto Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="moment.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <h1>📊 Crypto Dashboard</h1>
+    <p>Live data and charts powered by API</p>
+  </header>
+
+  <main class="container">
+    <!-- Top coins -->
+    <section class="details-section">
+      <h2>🌐 Top Coins</h2>
+      <div id="details" class="details-container">
+        <!-- JS will add coins here -->
+      </div>
+    </section>
+
+    <!-- Trading pairs -->
+    <section class="table-section">
+      <h2>🔗 Trading Pairs</h2>
+      <table class="myTable">
+        <thead>
+          <tr>
+            <th>Base Currency</th>
+            <th>Quote Currency</th>
+            <th>Logo 1</th>
+            <th>Logo 2</th>
+            <th>Min Price</th>
+            <th>Max Price</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Chart -->
+    <section class="chart-section">
+      <h2>📈 Price Chart</h2>
+
+      <div class="timeframe">
+        <label for="timeFrame">Choose your desired time frame:</label>
+        <select id="timeFrame">
+          <option value="1">1 Day</option>
+          <option value="3">3 Days</option>
+          <option value="5">5 Days</option>
+          <option value="10">10 Days</option>
+        </select>
+        <label for="fromDate">from</label><input type="date" id="fromDate" value="2021-04-14">
+        <label for="toDate">to</label><input type="date" id="toDate" value="2021-04-28">
+      </div>
+
+      <canvas id="myChart"></canvas>
+    </section>
+  </main>
+
+
+
+  <script src="app.js" defer></script>
+</body>
+</html>
