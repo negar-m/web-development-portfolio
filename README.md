@@ -1,4 +1,4 @@
-# 🌟 Negar M - Web Development Portfolio
+# 🌟 Negar MehrAfshan - Web Development Portfolio
 
 ## 🚀 [View Live Portfolio Demo](https://negar-m.github.io/web-development-portfolio/)
 
