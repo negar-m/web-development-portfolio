@@ -1,0 +1,535 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700');
+@import url("https://fonts.googleapis.com/css?family=Metal+Mania");
+
+@font-face {
+    font-family: "Booter - Zero Zero";
+    src: url("../Fonts/Booter - Zero Zero.woff") format("woff"),
+         url("../Fonts/Booter - Zero Zero.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Raleway;
+    color: #777;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+:root {
+    --primary: #A2D2FF;
+    --secondary: #BDE0FE;
+    --accent: #FFAFCC;
+    --light: #FFC8DD;
+    --purple: #CDB4DB;
+    --dark: #333;
+}
+
+body {
+    background: linear-gradient(135deg, var(--secondary), var(--primary));
+    color: var(--dark);
+}
+
+.nav ul {
+    margin: 0;
+}
+
+.nav li {
+    display: inline;
+}
+
+.nav a {
+    display: inline-block;
+    padding: .5em;
+    color: var(--dark);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.main-nav {
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: lighter;
+    border-bottom: 2px solid var(--light);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 15px 0;
+}
+
+.main-nav li {
+    padding: 0 5%;
+}
+
+.nav a:hover {
+    background-color: var(--light);
+    border-radius: 25px;
+    transform: translateY(-2px);
+}
+
+.main-header {
+    background-color: var(--primary);
+    padding: 60px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.band-name {
+    text-align: center;
+    margin: 0;
+    font-size: 4em;
+    font-family: "Booter - Zero Zero";
+    font-weight: normal;
+    color: var(--dark);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.band-name-large {
+    font-size: 8em;
+}
+
+.content-section {
+    margin: 2em auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5em;
+}
+
+.section-header {
+    font-family: "Metal Mania";
+    font-weight: normal;
+    color: var(--dark);
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.about-band-image {
+    float: left;
+    height: 200px;
+    width: 200px;
+    margin: 15px;
+    border-radius: 50%;
+}
+
+.main-footer {
+    background: var(--purple);
+    padding: 40px 0;
+    margin-top: 50px;
+    border-top: 5px solid var(--primary);
+}
+
+.main-footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.main-footer-container ul {
+    flex-grow: 1;
+    text-align: end;
+}
+
+.footer-nav li {
+    padding: 0 .5em;
+    display: inline;
+}
+
+.footer-nav img {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s ease;
+}
+
+.footer-nav img:hover {
+    transform: scale(1.2);
+}
+
+.btn {
+    text-align: center;
+    vertical-align: middle;
+    padding: .67em .67em;
+    cursor: pointer;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-header {
+    margin: .5em 15% 2em 15%;
+    color: white;
+    border: 2px solid #2D9CDB;
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 0;
+    font-size: 1.5em;
+    font-weight: lighter;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.btn-header:hover {
+    background-color: rgba(255, 255, 255, .3);
+}
+
+.btn-play {
+    display: block;
+    margin: 0 auto;
+    color: #2D9CDB;
+    font-size: 4em;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    text-align: center;
+}
+
+.btn-primary {
+    color: var(--dark);
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    padding: 12px 24px;
+    white-space: nowrap;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--secondary), var(--primary));
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(162, 210, 255, 0.4);
+}
+
+.tour-row {
+    border-bottom: 1px solid black;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+}
+
+.tour-row:last-child {
+    border: none;
+}
+
+.tour-item {
+    display: inline-block;
+    padding-right: .5em;
+}
+
+.tour-date {
+    color: #555;
+    width: 11%;
+    font-weight: bold;
+}
+
+.tour-city {
+    width: 24%;
+}
+
+.tour-arena {
+    width: 42%;
+}
+
+.tour-btn {
+    max-width: 19%;
+}
+
+.shop-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px 0;
+}
+
+.shop-item {
+    flex: 0 0 calc(33.333% - 40px);
+    max-width: 300px;
+    min-width: 280px;
+    margin: 0;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.4s ease;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.shop-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--accent), var(--purple));
+}
+
+.shop-item:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(162, 210, 255, 0.3);
+}
+
+.shop-item-title {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: var(--dark);
+    margin-bottom: 15px;
+}
+
+.shop-item-image {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.shop-item:hover .shop-item-image {
+    transform: scale(1.05);
+}
+
+.shop-item-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: auto;
+    padding-top: 20px;
+}
+
+.shop-item-price {
+    flex-grow: 1;
+    color: var(--accent);
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.cart-header {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: var(--dark);
+}
+
+.cart-column {
+    display: flex;
+    align-items: center;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cart-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 15px 0;
+}
+
+.cart-item {
+    width: 45%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    min-width: 200px;
+}
+
+.cart-price {
+    width: 20%;
+    font-size: 1.3em;
+    color: var(--accent);
+    font-weight: bold;
+    flex: 0.5;
+    text-align: center;
+    min-width: 100px;
+}
+
+.cart-quantity {
+    width: 35%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    min-width: 180px;
+    justify-content: flex-end;
+}
+
+.cart-item-title {
+    color: var(--dark);
+    margin-left: .5em;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.cart-item-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0;
+    border: 2px solid var(--light);
+}
+
+.btn-danger {
+    color: white;
+    background: linear-gradient(135deg, #FF6B6B, #FF8E8E);
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    padding: 12px 20px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+.btn-danger:hover {
+    background: linear-gradient(135deg, #FF5252, #FF7B7B);
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+}
+
+.cart-quantity-input {
+    height: 45px;
+    width: 70px;
+    border-radius: 8px;
+    border: 2px solid var(--primary);
+    background-color: white;
+    color: var(--dark);
+    padding: 0;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.cart-row:last-child {
+    border-bottom: 1px solid var(--light);
+}
+
+.cart-row:last-child .cart-column {
+    border: none;
+}
+
+.cart-total {
+    text-align: end;
+    margin-top: 30px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 25px;
+    padding: 25px 40px;
+    background: var(--secondary);
+    border-radius: 15px;
+    border: 3px solid var(--primary);
+}
+
+.cart-total-title {
+    font-weight: bold;
+    font-size: 1.8em;
+    color: var(--dark);
+    margin-right: 20px;
+}
+
+.cart-total-price {
+    color: var(--accent);
+    font-size: 2.2em;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.btn-purchase {
+    display: block;
+    margin: 40px auto 80px auto;
+    font-size: 1.3em;
+    background: var(--accent);
+    color: var(--dark);
+    border: 3px solid var(--light);
+    padding: 15px 40px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-purchase:hover {
+    background: var(--light);
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(255, 175, 204, 0.4);
+}
+
+.cart-header.cart-column {
+    background: var(--primary);
+    padding: 18px 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: var(--dark);
+    text-align: center;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.shop-item {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+@media (max-width: 1024px) {
+    .shop-item {
+        flex: 0 0 calc(50% - 30px);
+    }
+}
+
+@media (max-width: 768px) {
+    .shop-item {
+        flex: 0 0 100%;
+        max-width: 400px;
+    }
+    
+    .cart-row {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .cart-item, .cart-price, .cart-quantity {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .band-name-large {
+        font-size: 4em;
+    }
+}
