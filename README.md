@@ -14,18 +14,6 @@ Foundational projects showcasing core web development skills and learning progre
 
 ---
 
-## 📁 Projects in this repository:
-
-### 🚀 Intermediate Projects
-- **todo-list-localstorage/** - Advanced todo application with local storage
-- **cryptocurrency-dashboard/** - Real-time crypto tracking dashboard
-
-### 📚 Beginner Projects  
-- **javascript-weather-app/** - Weather application with API integration
-- **temperature-converter/** - Temperature conversion tool
-
----
-
 ## 🛠 Technical Skills
 
 - **Frontend:** HTML5, CSS3, JavaScript, Bootstrap
