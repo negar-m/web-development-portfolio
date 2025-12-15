@@ -13,6 +13,7 @@ search.addEventListener('click', function(){
     if (mainCitiesData) {
         $.querySelector('.city').innerHTML ='Weather in '+ mainCitiesData.city
         $.querySelector('.temp').innerHTML = mainCitiesData.temp +'°C'
+        $.querySelector('.description').innerHTML = mainCitiesData.weather
         $.querySelector('.humidity').innerHTML = 'Humidity: '+ mainCitiesData.humidity+'%'
         $.querySelector('.wind').innerHTML ='Wind speed: '+ mainCitiesData.windspeed +'km/h'
         $.querySelector('.weather').classList.remove('loading')
@@ -20,4 +21,5 @@ search.addEventListener('click', function(){
         alert("Enter the city name correctly.")
     }
 });
+
 
