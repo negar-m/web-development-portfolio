@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #34656D 0%, #334443 100%);
@@ -19,12 +20,12 @@
             padding: 40px 20px;
             line-height: 1.6;
         }
-        
+
         .container {
             max-width: 1000px;
             margin: 0 auto;
         }
-        
+
         .header {
             text-align: center;
             margin-bottom: 40px;
@@ -34,14 +35,14 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             border: 1px solid rgba(250, 234, 177, 0.1);
         }
-        
+
         .header h1 {
             font-size: 3.5em;
             margin-bottom: 15px;
             color: #FAEAB1;
             text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
         }
-        
+
         .header p {
             font-size: 1.3em;
             color: #FAEAB1;
@@ -49,7 +50,7 @@
             max-width: 600px;
             margin: 0 auto;
         }
-        
+
         /* Tabs Styling */
         .tabs {
             display: flex;
@@ -59,7 +60,7 @@
             padding: 10px;
             gap: 10px;
         }
-        
+
         .tab-btn {
             flex: 1;
             padding: 15px 20px;
@@ -72,36 +73,43 @@
             cursor: pointer;
             transition: all 0.3s ease;
         }
-        
+
         .tab-btn.active {
             background: linear-gradient(135deg, #BF092F, #34656D);
             box-shadow: 0 4px 15px rgba(191, 9, 47, 0.3);
         }
-        
+
         .tab-btn:hover:not(.active) {
             background: rgba(250, 234, 177, 0.1);
         }
-        
+
         .tab-content {
             display: none;
         }
-        
+
         .tab-content.active {
             display: block;
             animation: fadeIn 0.5s ease;
         }
-        
+
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        
+
         .projects-grid {
             display: grid;
             gap: 30px;
             margin-bottom: 50px;
         }
-        
+
         .project-card {
             background: rgba(51, 68, 67, 0.8);
             border-radius: 20px;
@@ -112,7 +120,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .project-card::before {
             content: '';
             position: absolute;
@@ -122,13 +130,13 @@
             height: 4px;
             background: linear-gradient(90deg, #FAEAB1, #BF092F, #34656D);
         }
-        
+
         .project-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
             background: rgba(51, 68, 67, 0.9);
         }
-        
+
         .project-card h2 {
             font-size: 2em;
             margin-bottom: 15px;
@@ -137,7 +145,7 @@
             align-items: center;
             gap: 12px;
         }
-        
+
         .project-card p {
             color: #FAEAB1;
             opacity: 0.9;
@@ -145,14 +153,14 @@
             font-size: 1.1em;
             line-height: 1.7;
         }
-        
+
         .tech-stack {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
             margin-bottom: 25px;
         }
-        
+
         .tech-tag {
             background: linear-gradient(135deg, #BF092F, #34656D);
             color: #FAEAB1;
@@ -162,7 +170,7 @@
             font-weight: 600;
             border: 1px solid rgba(250, 234, 177, 0.3);
         }
-        
+
         .demo-btn {
             display: inline-flex;
             align-items: center;
@@ -179,13 +187,13 @@
             cursor: pointer;
             box-shadow: 0 4px 15px rgba(191, 9, 47, 0.3);
         }
-        
+
         .demo-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(191, 9, 47, 0.5);
             background: linear-gradient(135deg, #34656D, #BF092F);
         }
-        
+
         .footer {
             text-align: center;
             padding: 30px;
@@ -194,7 +202,7 @@
             margin-top: 50px;
             border: 1px solid rgba(250, 234, 177, 0.1);
         }
-        
+
         .github-link {
             color: #FAEAB1;
             text-decoration: none;
@@ -203,55 +211,57 @@
             border-bottom: 2px solid #BF092F;
             padding-bottom: 2px;
         }
-        
+
         .github-link:hover {
             color: #BF092F;
             border-bottom-color: #FAEAB1;
         }
-        
+
         @media (max-width: 768px) {
             .header h1 {
                 font-size: 2.5em;
             }
-            
+
             .project-card {
                 padding: 30px 25px;
             }
-            
+
             .project-card h2 {
                 font-size: 1.7em;
             }
-            
+
             .header {
                 padding: 40px 20px;
             }
-            
+
             .tabs {
                 flex-direction: column;
             }
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="header">
             <h1>Negar MehrAfshan</h1>
             <p>Frontend Developer & Creative Coder</p>
         </div>
-        
+
         <!-- Tabs Navigation -->
         <div class="tabs">
             <button class="tab-btn active" data-tab="intermediate">🚀 Intermediate Projects</button>
             <button class="tab-btn" data-tab="beginner">📚 Beginner Projects</button>
         </div>
-        
+
         <!-- Intermediate Projects Tab -->
         <div class="tab-content active" id="intermediate">
             <div class="projects-grid">
                 <div class="project-card">
                     <h2>📝 Todo List App</h2>
-                    <p>A modern, responsive todo list application with local storage persistence. Features task management, completion tracking, and clean Bootstrap design.</p>
-                    
+                    <p>A modern, responsive todo list application with local storage persistence. Features task
+                        management, completion tracking, and clean Bootstrap design.</p>
+
                     <div class="tech-stack">
                         <span class="tech-tag">HTML5</span>
                         <span class="tech-tag">CSS3</span>
@@ -259,85 +269,144 @@
                         <span class="tech-tag">Bootstrap</span>
                         <span class="tech-tag">Local Storage</span>
                     </div>
-                    
-                    <a href="intermediate-projects/todo-list-localstorage/index.html" target="_blank" rel="noopener noreferrer" class="demo-btn">
+
+                    <a href="intermediate-projects/todo-list-localstorage/index.html" target="_blank"
+                        rel="noopener noreferrer" class="demo-btn">
                         🚀 Live Demo
                     </a>
                 </div>
-              </div>
-                <div class="project-card">
-                    <h2>💰 Cryptocurrency Dashboard</h2>
-                    <p>A real-time cryptocurrency tracking dashboard with live price updates, portfolio management, and interactive charts. Monitor your crypto investments with beautiful visualizations.</p>
-                    
-                    <div class="tech-stack">
-                        <span class="tech-tag">HTML5</span>
-                        <span class="tech-tag">CSS3</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">API Integration</span>
-                        <span class="tech-tag">Chart.js</span>
-                        <span class="tech-tag">Local Storage</span>
-                        <span class="tech-tag">Responsive Design</span>
-                    </div>
-                    
-                    <a href="intermediate-projects/cryptocurrency-dashboard/index.html" target="_blank" rel="noopener noreferrer" class="demo-btn">
-                        🚀 Live Demo
-                    </a>
+            </div>
+            <div class="project-card">
+                <h2>💰 Cryptocurrency Dashboard</h2>
+                <p>A real-time cryptocurrency tracking dashboard with live price updates, portfolio management, and
+                    interactive charts. Monitor your crypto investments with beautiful visualizations.</p>
+
+                <div class="tech-stack">
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">CSS3</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">API Integration</span>
+                    <span class="tech-tag">Chart.js</span>
+                    <span class="tech-tag">Local Storage</span>
+                    <span class="tech-tag">Responsive Design</span>
                 </div>
 
-            <div class="project-card">
-    <h2>🎀 Doll Shop</h2>
-    <p>A beautiful and modern doll shop website with advanced shopping cart system. Features product management, quantity control, and real-time price calculation.</p>
-    
-    <div class="tech-stack">
-        <span class="tech-tag">HTML5</span>
-        <span class="tech-tag">CSS3</span>
-        <span class="tech-tag">JavaScript</span>
-    </div>
-    
-    <a href="intermediate-projects/doll-shop/index.html" target="_blank" class="demo-btn">
-        🚀 Live Demo
-    </a>
-</div>
-                <div class="project-card">
-    <h2>🔍 Auto Complete Search</h2>
-    <p>A modern, responsive auto-complete search box with real-time suggestions filtering. Features case-insensitive search, click-to-select functionality, and smooth animations.</p>
-    
-    <div class="tech-stack">
-        <span class="tech-tag">HTML5</span>
-        <span class="tech-tag">CSS3</span>
-        <span class="tech-tag">JavaScript</span>
-        <span class="tech-tag">Responsive Design</span>
-        <span class="tech-tag">UI/UX</span>
-    </div>
-    
-    <a href="intermediate-projects/auto-complete-search/index.html" target="_blank" rel="noopener noreferrer" class="demo-btn">
-        🚀 Live Demo
-    </a>
-</div>
+                <a href="intermediate-projects/cryptocurrency-dashboard/index.html" target="_blank"
+                    rel="noopener noreferrer" class="demo-btn">
+                    🚀 Live Demo
+                </a>
+            </div>
 
             <div class="project-card">
-    <h2>🛒 E-Commerce Shop</h2>
-    <p>A clean, responsive e-commerce website with product catalog and individual product pages. Features dynamic routing, URL parameters, and smooth navigation between pages.</p>
-    
-    <div class="tech-stack">
-        <span class="tech-tag">HTML5</span>
-        <span class="tech-tag">CSS3</span>
-        <span class="tech-tag">JavaScript</span>
-    </div>
-    
-    <a href="intermediate-projects/simple-ecommerce-shop/index.html" target="_blank" rel="noopener noreferrer" class="demo-btn">
-        🚀 Live Demo
-    </a>
-</div>
-              </div>     
-        
+                <h2>🎀 Doll Shop</h2>
+                <p>A beautiful and modern doll shop website with advanced shopping cart system. Features product
+                    management, quantity control, and real-time price calculation.</p>
+
+                <div class="tech-stack">
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">CSS3</span>
+                    <span class="tech-tag">JavaScript</span>
+                </div>
+
+                <a href="intermediate-projects/doll-shop/index.html" target="_blank" class="demo-btn">
+                    🚀 Live Demo
+                </a>
+            </div>
+            <div class="project-card">
+                <h2>🔍 Auto Complete Search</h2>
+                <p>A modern, responsive auto-complete search box with real-time suggestions filtering. Features
+                    case-insensitive search, click-to-select functionality, and smooth animations.</p>
+
+                <div class="tech-stack">
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">CSS3</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">Responsive Design</span>
+                    <span class="tech-tag">UI/UX</span>
+                </div>
+
+                <a href="intermediate-projects/auto-complete-search/index.html" target="_blank"
+                    rel="noopener noreferrer" class="demo-btn">
+                    🚀 Live Demo
+                </a>
+            </div>
+
+            <div class="project-card">
+                <h2>🛒 E-Commerce Shop</h2>
+                <p>A clean, responsive e-commerce website with product catalog and individual product pages. Features
+                    dynamic routing, URL parameters, and smooth navigation between pages.</p>
+
+                <div class="tech-stack">
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">CSS3</span>
+                    <span class="tech-tag">JavaScript</span>
+                </div>
+
+                <a href="intermediate-projects/simple-ecommerce-shop/index.html" target="_blank"
+                    rel="noopener noreferrer" class="demo-btn">
+                    🚀 Live Demo
+                </a>
+            </div>
+            <div class="project-card">
+                <h2>✨ Modal Popup Window</h2>
+
+                <p>
+                    A responsive modal popup window that opens on button click, blurs the background, and can be closed
+                    with the close button or Escape key.
+                </p>
+
+
+                <div class="tech-stack">
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">CSS3</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">CSS Animation</span>
+                    <span class="tech-tag">Keyboard Events</span>
+                    <span class="tech-tag">UI Interaction</span>
+                </div>
+
+
+                <a href="intermediate-projects/modal-popup/index.html" target="_blank" rel="noopener noreferrer"
+                    class="demo-btn">
+                    🚀 Live Demo
+                </a>
+            </div>
+
+
+        </div>
+
         <!-- Beginner Projects Tab -->
         <div class="tab-content" id="beginner">
             <div class="projects-grid">
-                  <div class="project-card">
+                <div class="project-card">
+                    <h2>📌 Kanban Todo Board</h2>
+
+                    <p>
+                        A simple real-time JavaScript app for visualizing keyboard event data.
+                    </p>
+
+                    <div class="tech-stack">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Drag & Drop API</span>
+                        <span class="tech-tag">DOM Manipulation</span>
+                        <span class="tech-tag">Modal UI</span>
+                    </div>
+
+
+
+
+                    <a href="beginner-projects/kanban-todo-board/index.html" target="_blank" rel="noopener noreferrer"
+                        class="demo-btn">
+                        🚀 Live Demo
+                    </a>
+                </div>
+                <div class="project-card">
                     <h2>⛅ Weather App</h2>
-                    <p>Real-time weather application with beautiful UI and accurate weather data display. Perfect for checking forecasts on the go.</p>
-                    
+                    <p>Real-time weather application with beautiful UI and accurate weather data display. Perfect for
+                        checking forecasts on the go.</p>
+
                     <div class="tech-stack">
                         <span class="tech-tag">HTML5</span>
                         <span class="tech-tag">CSS3</span>
@@ -345,63 +414,142 @@
                         <span class="tech-tag">API Integration</span>
                         <span class="tech-tag">Responsive Design</span>
                     </div>
-                    
-                    <a href="beginner-projects/javascript-weather-app/weather.html" target="_blank" rel="noopener noreferrer" class="demo-btn">
+
+                    <a href="beginner-projects/javascript-weather-app/weather.html" target="_blank"
+                        rel="noopener noreferrer" class="demo-btn">
                         🚀 Live Demo
                     </a>
                 </div>
-            <div class="project-card">
-              <h2>🌡️ Temperature Converter</h2>
-              <p>A sleek and intuitive temperature conversion tool that instantly converts between Celsius, Fahrenheit, and Kelvin. Features real-time updates and a beautiful, user-friendly interface.</p>
-              
-              <div class="tech-stack">
-                  <span class="tech-tag">HTML5</span>
-                  <span class="tech-tag">CSS3</span>
-                  <span class="tech-tag">JavaScript</span>
-                  <span class="tech-tag">Real-time Conversion</span>
-                  <span class="tech-tag">UI/UX Design</span>
-                  <span class="tech-tag">Responsive Design</span>
-              </div>
-              <a href="beginner-projects/temperature-converter/temperature-converter.html" target="_blank" rel="noopener noreferrer" class="demo-btn">
-        🚀 Live Demo
-    </a>
-        </div>
-     <div class="project-card">
+                <div class="project-card">
+                    <h2>🌡️ Temperature Converter</h2>
+                    <p>A sleek and intuitive temperature conversion tool that instantly converts between Celsius,
+                        Fahrenheit, and Kelvin. Features real-time updates and a beautiful, user-friendly interface.</p>
+
+                    <div class="tech-stack">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Real-time Conversion</span>
+                        <span class="tech-tag">UI/UX Design</span>
+                        <span class="tech-tag">Responsive Design</span>
+                    </div>
+                    <a href="beginner-projects/temperature-converter/temperature-converter.html" target="_blank"
+                        rel="noopener noreferrer" class="demo-btn">
+                        🚀 Live Demo
+                    </a>
+                </div>
+                <div class="project-card">
                     <h2>⌨️ KeyCode Viewer</h2>
                     <p>
-                          A simple real-time JavaScript app for visualizing keyboard event data.
-                            </p>
+                        A simple real-time JavaScript app for visualizing keyboard event data.
+                    </p>
 
-<div class="tech-stack">
-  <span class="tech-tag">HTML</span>
-  <span class="tech-tag">CSS</span>
-  <span class="tech-tag">JavaScript</span>
-</div>
-                    
-                    <a href="beginner-projects/keyCode/index.html" target="_blank" rel="noopener noreferrer" class="demo-btn">
+                    <div class="tech-stack">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+
+                    <a href="beginner-projects/keyCode/index.html" target="_blank" rel="noopener noreferrer"
+                        class="demo-btn">
                         🚀 Live Demo
                     </a>
                 </div>
-        </div>
-           
+
+
+                <div class="project-card">
+                    <h2>👁️ Password Toggle Input</h2>
+                    <p>
+                        A password field with a toggle to show or hide the password for easier input.
+                    </p>
+
+
+                    <div class="tech-stack">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Font Awesome</span>
+                        <span class="tech-tag">DOM Manipulation</span>
+                    </div>
+
+
+                    <a href="beginner-projects/password-toggle-input/index.html" target="_blank"
+                        rel="noopener noreferrer" class="demo-btn">
+                        🚀 Live Demo
+                    </a>
+                </div>
+                <div class="project-card">
+                    <h2>📝 Todo List App</h2>
+
+                    <p>
+                        A responsive todo list app where users can add and remove tasks. Built with HTML, CSS, and
+                        JavaScript for real-time task management.
+                    </p>
+
+
+                    <div class="tech-stack">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Bootstrap 4</span>
+                        <span class="tech-tag">Font Awesome</span>
+                        <span class="tech-tag">DOM Manipulation</span>
+                    </div>
+
+
+
+                    <a href="beginner-projects/todo-list-app/index.html" target="_blank" rel="noopener noreferrer"
+                        class="demo-btn">
+                        🚀 Live Demo
+                    </a>
+                </div>
+                <div class="project-card">
+                    <h2>🖱️ Custom Right Click Menu</h2>
+                    <p>
+                        A custom right-click context menu that replaces the default browser menu, with multiple actions
+                        and smooth closing on outside click or Escape key.
+                    </p>
+
+                    <div class="tech-stack">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Font Awesome</span>
+                        <span class="tech-tag">Google Fonts</span>
+                        <span class="tech-tag">DOM Events</span>
+                    </div>
+
+
+
+                    <a href="beginner-projects/custom-context-menu/index.html" target="_blank" rel="noopener noreferrer"
+                        class="demo-btn">
+                        🚀 Live Demo
+                    </a>
+                </div>
+
+
+
             </div>
+
+        </div>
         <div class="footer">
-            <p>Explore more projects on my <a href="https://github.com/negar-m" target="_blank" class="github-link">GitHub Profile</a></p>
+            <p>Explore more projects on my <a href="https://github.com/negar-m" target="_blank"
+                    class="github-link">GitHub Profile</a></p>
         </div>
     </div>
 
     <script>
         // Tab functionality
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const tabBtns = document.querySelectorAll('.tab-btn');
             const tabContents = document.querySelectorAll('.tab-content');
-            
+
             tabBtns.forEach(btn => {
                 btn.addEventListener('click', () => {
                     // Remove active class from all buttons and contents
                     tabBtns.forEach(b => b.classList.remove('active'));
                     tabContents.forEach(content => content.classList.remove('active'));
-                    
+
                     // Add active class to clicked button and corresponding content
                     btn.classList.add('active');
                     const tabId = btn.getAttribute('data-tab');
@@ -411,4 +559,5 @@
         });
     </script>
 </body>
+
 </html>
