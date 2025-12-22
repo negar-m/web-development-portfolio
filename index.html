@@ -448,7 +448,6 @@
                 <h2>📚 Book List App</h2>
                 <p>A simple interactive Book List application where users can add, delete, and manage books. Data is
                     stored in localStorage so it persists across page reloads.</p>
-
                 <div class="tech-stack">
                     <span class="tech-tag">HTML5</span>
                     <span class="tech-tag">CSS3</span>
@@ -456,10 +455,30 @@
                     <span class="tech-tag">Bootstrap 4</span>
                     <span class="tech-tag">FontAwesome</span>
                 </div>
-
-
-
                 <a href="intermediate-projects/book-list-app/index.html" target="_blank" rel="noopener noreferrer"
+                    class="demo-btn">
+                    🚀 Live Demo
+                </a>
+            </div>
+            <div class="project-card">
+                <h2>👟 Shoes Product Showcase</h2>
+                <p>
+                    A dynamic product listing and detail page built with JavaScript. Products are
+                    generated from an array and displayed as cards on the main page. Each product
+                    has its own detail page that loads data dynamically using URL parameters.
+                    This project demonstrates DOM manipulation, array handling, and page navigation
+                    without any backend.
+                </p>
+
+                <div class="tech-stack">
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">CSS3</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">DOM Manipulation</span>
+                    <span class="tech-tag">URL Parameters</span>
+                </div>
+
+                <a href="intermediate-projects/product-catalog/index.html" target="_blank" rel="noopener noreferrer"
                     class="demo-btn">
                     🚀 Live Demo
                 </a>
@@ -663,51 +682,92 @@
                     </a>
                 </div>
                 <div class="project-card">
-                    <h2>🩺 BMI Calculator</h2>
-                    <p>A simple interactive BMI Calculator that updates in real-time based on user input for weight and
-                        height. Shows BMI value and category with color indicators.</p>
+                    <h2>⏰ Digital Clock</h2>
+                    <p>
+                        A simple digital clock using JavaScript that shows hours, minutes, and seconds in real time with
+                        a clean, modern design.
+
+                    </p>
+
                     <div class="tech-stack">
                         <span class="tech-tag">HTML5</span>
                         <span class="tech-tag">CSS3</span>
                         <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Date Object</span>
+                        <span class="tech-tag">setInterval</span>
                     </div>
-                    <a href="beginner-projects/bmi-calculator/index.html" target="_blank" rel="noopener noreferrer"
+                    <a href="beginner-projects/digital-clock/index.html" target="_blank" rel="noopener noreferrer"
+                        class="demo-btn">
+                        🚀 Live Demo
+                    </a>
+                </div>
+                <div class="project-card">
+                    <h2>✍️ Text Generator</h2>
+                    <p>
+                        A simple text generator that allows users to generate multiple paragraphs of dummy text. Users
+                        can specify the number of paragraphs, and the text is displayed instantly. Built with HTML, CSS,
+                        Bootstrap, and vanilla JavaScript, this project demonstrates DOM manipulation, form handling,
+                        and dynamic content generation.
+                    </p>
+
+                    <div class="tech-stack">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">Bootstrap 4</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <a href="beginner-projects/text-generator/index.html" target="_blank" rel="noopener noreferrer"
+                        class="demo-btn">
+                        🚀 Live Demo
+                    </a>
+                </div>
+                <div class="project-card">
+                    <h2>👥 Users Pagination</h2>
+                    <p>
+                        A simple user list display with pagination. Users are displayed in pages with a fixed number of
+                        items per page. The project demonstrates array handling, DOM manipulation, and dynamic
+                        pagination using vanilla JavaScript and Bootstrap for basic styling.
+                    </p>
+
+                    <div class="tech-stack">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">Bootstrap 3</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <a href="beginner-projects/users-pagination/index.html" target="_blank" rel="noopener noreferrer"
                         class="demo-btn">
                         🚀 Live Demo
                     </a>
                 </div>
 
-
-
             </div>
-
+            <div class="footer">
+                <p>Explore more projects on my <a href="https://github.com/negar-m" target="_blank"
+                        class="github-link">GitHub Profile</a></p>
+            </div>
         </div>
-        <div class="footer">
-            <p>Explore more projects on my <a href="https://github.com/negar-m" target="_blank"
-                    class="github-link">GitHub Profile</a></p>
-        </div>
-    </div>
 
-    <script>
-        // Tab functionality
-        document.addEventListener('DOMContentLoaded', function () {
-            const tabBtns = document.querySelectorAll('.tab-btn');
-            const tabContents = document.querySelectorAll('.tab-content');
+        <script>
+            // Tab functionality
+            document.addEventListener('DOMContentLoaded', function () {
+                const tabBtns = document.querySelectorAll('.tab-btn');
+                const tabContents = document.querySelectorAll('.tab-content');
 
-            tabBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    // Remove active class from all buttons and contents
-                    tabBtns.forEach(b => b.classList.remove('active'));
-                    tabContents.forEach(content => content.classList.remove('active'));
+                tabBtns.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        // Remove active class from all buttons and contents
+                        tabBtns.forEach(b => b.classList.remove('active'));
+                        tabContents.forEach(content => content.classList.remove('active'));
 
-                    // Add active class to clicked button and corresponding content
-                    btn.classList.add('active');
-                    const tabId = btn.getAttribute('data-tab');
-                    document.getElementById(tabId).classList.add('active');
+                        // Add active class to clicked button and corresponding content
+                        btn.classList.add('active');
+                        const tabId = btn.getAttribute('data-tab');
+                        document.getElementById(tabId).classList.add('active');
+                    });
                 });
             });
-        });
-    </script>
+        </script>
 </body>
 
 </html>
