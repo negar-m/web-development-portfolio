@@ -4,12 +4,14 @@ let btnSave = document.getElementById('btn-save')
 let btnDelete = document.getElementById('btn-delete')
 let listed = document.getElementById('listed')
 
+listed.addEventListener('click',function(event){
+    if(event.target.tagName ==='P'){
+        event.target.parentElement.remove()
+    }
+})
 function addNote(){
     if(formInput.value){
         let card = document.createElement('div')
-        card.addEventListener('click',function(e) {
-            e.target.parentElement.remove()
-        })
         card.className ='card shadow-sm rounded'
         let cardBg = formInput.style.backgroundColor
         card.style.backgroundColor = cardBg
@@ -45,3 +47,4 @@ colors.forEach(function(color){
         formInput.style.backgroundColor = mainColor
     })
 })
+
